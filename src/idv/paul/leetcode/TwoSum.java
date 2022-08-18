@@ -19,15 +19,15 @@ public class TwoSum {
 
         for (int i=0; i<nums.length; ++i) {
             int num = nums[i];
-            int difference = target - num;
-            // System.out.println(String.format("num=%d, target=%d, diff=%d", num, target, difference));
-            Integer cachedDiff = cacheMap.get(difference);
-            if (cachedDiff == null) {
-                // the idea is to cache the difference in the map
-                cacheMap.put(num, i);
-            } else {
+            Integer cachedDiff = cacheMap.get(num);
+            if (cachedDiff != null) {
                 return new int[] { cachedDiff, i };
             }
+
+            int difference = target - num;
+            // System.out.println(String.format("num=%d, target=%d, diff=%d", num, target, difference));
+            // the idea is to cache the difference in the map
+            cacheMap.put(difference, i);
         }
         return null;
     }
