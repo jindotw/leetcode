@@ -1,10 +1,10 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.util;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
