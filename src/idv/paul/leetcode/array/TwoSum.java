@@ -1,4 +1,4 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.array;
 
 import java.util.Arrays;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.linkedlist;
 
 import idv.paul.leetcode.util.ListNode;
 
