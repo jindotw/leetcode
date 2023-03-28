@@ -1,4 +1,4 @@
-package idv.paul.leetcode.array;
+package idv.paul.leetcode.two_pointers;
 
 /*
   https://leetcode.com/problems/3sum/
@@ -25,7 +25,34 @@ package idv.paul.leetcode.array;
 
 import java.util.*;
 
-public class ThreeSum {
+public class ThreeSum_15 {
+    public static List<List<Integer>> threeSum2(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> combos = new LinkedList<>();
+        for (int i = 0; i < nums.length-2; i++) {
+            if (i == 0 || (nums[i] != nums[i - 1])) {
+                int lft = i + 1, rgt = nums.length - 1;
+                int target = -nums[i];
+                while (lft < rgt) {
+                    if (nums[lft] + nums[rgt] == target) {
+                        combos.add(Arrays.asList(nums[i], nums[lft], nums[rgt]));
+                        while (lft < rgt && nums[lft] == nums[lft + 1]) lft++;
+                        while (lft < rgt && nums[rgt] == nums[rgt - 1]) rgt--;
+                        lft++;
+                        rgt--;
+                    } else if (nums[lft] + nums[rgt] < target) {
+                        ++lft;
+                    }
+                    else {
+                        --rgt;
+                    }
+                }
+            }
+        }
+
+        return combos;
+    }
+
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> combos = new ArrayList<>();
         // no possible solutions
