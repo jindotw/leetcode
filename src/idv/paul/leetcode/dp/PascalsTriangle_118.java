@@ -18,12 +18,13 @@ Output: [[1]]
  */
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class PascalsTriangle_118 {
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> rows = new ArrayList<>(numRows);
-        List<Integer> prev = List.of(1);
+        List<Integer> prev = Collections.singletonList(1);
         rows.add(prev);
 
         for (int x=1; x<numRows; ++x) {
