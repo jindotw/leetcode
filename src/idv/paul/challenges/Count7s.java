@@ -16,6 +16,30 @@ package idv.paul.challenges;
  */
 
 public class Count7s {
+
+    public static int g2(int n, int d) {
+        int count = 0;
+        int factor = 1;
+
+        while (n / factor > 0) {
+            int left = n / (factor* 10);
+            int curr = (n / factor) % 10;
+            int right = n % factor;
+
+            count += left * factor;
+
+            if (curr > d) {
+                count += factor;
+            } else if (curr == d) {
+                count += right + 1;
+            }
+
+            factor *= 10;
+        }
+
+        return count;
+    }
+
     public static int g(int N, int d) {
         int count = 0;
         for (int i = 1; i <= N; i++) {
@@ -32,9 +56,9 @@ public class Count7s {
     }
 
     public static void main(String... args) {
-        final int num = 1000;
+        final int num = 200;
         final int d = 7;
-        int occurrences = g(num, d);
+        int occurrences = g2(num, d);
         System.out.println("the number of presence of " + d + " when counting from 1 to " + num + " is " + occurrences);
     }
 }
