@@ -2,7 +2,7 @@ package idv.paul.geeksforgeeks;
 
 public class StackUsingArray {
     int top;
-    int arr[] = new int[1000];
+    int[] arr = new int[1000];
 
     StackUsingArray() {
         top = -1;
