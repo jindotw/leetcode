@@ -12,7 +12,7 @@ import java.util.Map;
  * You can return the answer in any order.
  */
 
-public class TwoSum {
+public class TwoSum_0001 {
 
     private static int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> cacheMap = new HashMap<>();

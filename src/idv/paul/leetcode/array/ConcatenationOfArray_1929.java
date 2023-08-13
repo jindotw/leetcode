@@ -1,4 +1,4 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.array;
 
 /*
 1929. Concatenation of Array

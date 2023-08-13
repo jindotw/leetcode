@@ -30,7 +30,7 @@ Constraints:
 1 <= nums.length <= 1000
 -10^6 <= nums[i] <= 10^6
  */
-public class SumOf1DArray {
+public class SumOf1DArray_1480 {
     public static int[] runningSum(int[] nums) {
         for (int i=1; i<nums.length; ++i) {
             nums[i] = nums[i-1] + nums[i];

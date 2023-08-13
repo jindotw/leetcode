@@ -36,7 +36,7 @@ The pivot index is 0.
 Left sum = 0 (no elements to the left of index 0)
 Right sum = nums[1] + nums[2] = 1 + -1 = 0
 */
-public class FindPivotIndex {
+public class FindPivotIndex_0724 {
     public static int pivotIndex(int[] nums) {
         // calculate the sum of nums[]
         // int rgtSum = Arrays.stream(nums).sum();

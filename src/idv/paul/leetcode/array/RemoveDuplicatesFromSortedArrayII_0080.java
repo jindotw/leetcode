@@ -1,4 +1,4 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.array;
 
 /*
 80. Remove Duplicates from Sorted Array II

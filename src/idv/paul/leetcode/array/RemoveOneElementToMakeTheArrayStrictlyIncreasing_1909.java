@@ -1,4 +1,4 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.array;
 
 /*
 1909. Remove One Element to Make the Array Strictly Increasing

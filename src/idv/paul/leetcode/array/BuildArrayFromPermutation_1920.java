@@ -1,4 +1,4 @@
-package idv.paul.leetcode;
+package idv.paul.leetcode.array;
 
 /*
 1920. Build Array from Permutation
