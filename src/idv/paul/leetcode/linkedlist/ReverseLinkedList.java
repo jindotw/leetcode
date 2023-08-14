@@ -4,22 +4,20 @@ import idv.paul.leetcode.util.ListNode;
 
 import static idv.paul.leetcode.util.ListNode.printListNode;
 
-/**
+/*
  * <a href="https://leetcode.com/problems/reverse-linked-list/">Reverse Linked List</a>
  *
  * Given the head of a singly linked list, reverse the list, and return the reversed list.
  */
 public class ReverseLinkedList {
     public static ListNode reverseList(ListNode head) {
-        ListNode prev = null;
-        ListNode curr = head;
-        ListNode tmp;
+        ListNode prev = null, next;
 
-        while (curr != null) {
-            tmp = curr.next;
+        for (ListNode curr = head; curr != null;) {
+            next = curr.next;
             curr.next = prev;
             prev = curr;
-            curr = tmp;
+            curr = next;
         }
 
         return prev;
