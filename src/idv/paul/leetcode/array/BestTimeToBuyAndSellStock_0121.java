@@ -39,6 +39,18 @@ Dynamic Programming
  */
 
 public class BestTimeToBuyAndSellStock_0121 {
+
+	public static int maxProfit2(int[] prices) {
+		int buy = prices[0], sell = 0;
+
+		for (int i=1; i<prices.length; i++) {
+			sell = Math.max(sell, prices[i] - buy);
+			buy = Math.min(buy, prices[i]);
+		}
+
+		return sell;
+	}
+
 	public static int maxProfit(int[] prices) {
 		int profit = 0;
 		int lowest = Integer.MAX_VALUE;
@@ -52,7 +64,8 @@ public class BestTimeToBuyAndSellStock_0121 {
 	}
 
 	public static void main(String ...argv) {
-		int[] prices = new int[]{1, 2, 3, 4, 5};
+		int[] prices = new int[]{7,1,5,3,6,4};
 		System.out.println(maxProfit(prices));
+		System.out.println(maxProfit2(prices));
 	}
 }
